@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTodo } from "../slices/todoSlice";
+import { toggleTodo, removeTodo } from "../slices/todoSlice";
 
 const TodoList = () => {
   const { list, filter } = useSelector((state) => state.todos);
@@ -20,7 +20,7 @@ const TodoList = () => {
             >
               {todo.text}
             </span>
-            <button>Remover</button>
+            <button onClick={() => dispatch(removeTodo(todo.id))}>Remover</button>
           </li>
         ))}
       </ul>
