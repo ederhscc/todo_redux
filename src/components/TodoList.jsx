@@ -11,6 +11,10 @@ const TodoList = () => {
           <span>Algum texto de tarefa</span>
           <button>Remover</button>
         </li>
+        <li>
+          <span className="line-through">Algum texto de tarefa</span>
+          <button>Remover</button>
+        </li>
       </ul>
     </div>
   );
